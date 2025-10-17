@@ -54,12 +54,12 @@ CLASS lhc_zreco_ddl_i_reco_form IMPLEMENTATION.
 
 
 
-*    DATA lo_zreco_common  TYPE REF TO zreco_common.
-*    CREATE OBJECT lo_zreco_common.
-*    lo_zreco_common->multi_sending(
-*    it_cform = lt_cform
-*    iv_output = ''
-*     ).
+    DATA lo_zreco_common  TYPE REF TO zreco_common.
+    CREATE OBJECT lo_zreco_common.
+    lo_zreco_common->multi_sending(
+    it_cform = lt_cform
+    iv_output = ''
+     ).
 
 
       CATCH cx_root INTO DATA(lx_err).

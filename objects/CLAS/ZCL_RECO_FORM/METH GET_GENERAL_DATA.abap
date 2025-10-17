@@ -407,10 +407,10 @@
               AND monat GE @p_period
               AND mtype IN ( 'X', @gv_mtype ).
     IF sy-subrc EQ 0.
-      AUTHORITY-CHECK OBJECT '/ITETR/DEL' "TODO
-        ID 'BUKRS' FIELD gs_adrs-bukrs
-        ID 'ACTVT' FIELD '70'
-        ID 'KOART' FIELD '*'.
+*      AUTHORITY-CHECK OBJECT '/ITETR/DEL' "TODO
+*        ID 'BUKRS' FIELD gs_adrs-bukrs
+*        ID 'ACTVT' FIELD '70'
+*        ID 'KOART' FIELD '*'.
       IF sy-subrc NE 0.
 *        MESSAGE s110 DISPLAY LIKE 'E'. "YiğitcanÖzdemir
 *        LEAVE LIST-PROCESSING.

@@ -166,8 +166,11 @@
              OR <fs_data>-hesap_no  <> ls_prev_key-hesap_no
              OR <fs_data>-kunnr     <> ls_prev_key-kunnr
              OR <fs_data>-lifnr     <> ls_prev_key-lifnr.
+            TRY.
+                lv_uuid = cl_system_uuid=>create_uuid_c22_static( ).
 
-            lv_uuid = cl_system_uuid=>create_uuid_c22_static( ).
+              CATCH cx_root INTO DATA(lx_err)..
+            ENDTRY..
             ls_prev_key = <fs_data>. " key değerini sakla
           ENDIF.
 

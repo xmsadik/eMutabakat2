@@ -55,7 +55,7 @@
     ENDLOOP.
 
 
-    LOOP AT gt_cform INTO data(ls_cform).
+    LOOP AT gt_cform INTO DATA(ls_cform).
 
       LOOP AT gt_mail_list INTO gs_mail_list WHERE kunnr EQ ls_cform-kunnr
                          AND lifnr EQ ls_cform-lifnr.

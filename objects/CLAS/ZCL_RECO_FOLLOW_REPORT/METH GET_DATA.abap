@@ -102,9 +102,9 @@
 
     CLEAR gs_out.
 
-    AUTHORITY-CHECK OBJECT 'F_BKPF_BUK'
-    ID 'BUKRS' FIELD iv_bukrs
-    ID 'ACTVT' FIELD '03'.
+*    AUTHORITY-CHECK OBJECT 'F_BKPF_BUK'
+*    ID 'BUKRS' FIELD iv_bukrs
+*    ID 'ACTVT' FIELD '03'.
 
     IF sy-subrc NE 0.
 *    data(lv_msg) = new_message_with_text(  text = 'şirket kodunda görüntüleme yetkiniz yok' severity = cl_abap_behv=>ms-success ).         D_MBAYEL
@@ -538,8 +538,8 @@
 
     gt_remd2[] = gt_remd[].
 
-    DELETE ADJACENT DUPLICATES FROM gt_remd
-    COMPARING bukrs mnumber datum uzeit.
+    DELETE ADJACENT DUPLICATES FROM gt_remd "#EC CI_SORTED
+    COMPARING bukrs mnumber datum uzeit.    "#EC CI_SORTED
 
 * Mutabakat Gönderilen Mail
     SELECT *

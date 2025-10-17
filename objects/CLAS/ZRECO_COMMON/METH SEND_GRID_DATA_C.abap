@@ -249,7 +249,7 @@
 *      APPEND LINES OF  it_srv_attachment TO ls_input_grid-files.
 *    ENDIF.
 
-    select single CompanyCodeName from I_CompanyCode where companycode = @i_head_c-bukrs into @data(lv_comp).
+    SELECT SINGLE CompanyCodeName FROM I_CompanyCode WHERE companycode = @i_head_c-bukrs INTO @DATA(lv_comp).
 
     DATA(lv_json) =  /ui2/cl_json=>serialize( EXPORTING data = ls_input_grid pretty_name = 'X' ).
 

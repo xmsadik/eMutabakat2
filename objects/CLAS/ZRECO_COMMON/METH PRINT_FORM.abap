@@ -495,9 +495,11 @@
 *                                       iv_gjahr = p_gjahr
 *                             CHANGING cv_number = lv_number
 *                                      cv_random = lv_random ).
-
-      lv_number = cl_system_uuid=>create_uuid_c22_static( ).
-      lv_random = cl_system_uuid=>create_uuid_c22_static( ).
+      TRY.
+          lv_number = cl_system_uuid=>create_uuid_c22_static( ).
+          lv_random = cl_system_uuid=>create_uuid_c22_static( ).
+        CATCH cx_root INTO DATA(lx_err).
+      ENDTRY..
     ELSE.
 
 *      CALL METHOD go_log->bal_log_msg_add
@@ -856,7 +858,7 @@
 *  ENDIF.
 
     ENDIF.
-
+"default class belirleyip müşteri sistemleri
 
     send_grid_data_c( it_out_c = gt_cform_sf
                       i_head_c = ls_head
