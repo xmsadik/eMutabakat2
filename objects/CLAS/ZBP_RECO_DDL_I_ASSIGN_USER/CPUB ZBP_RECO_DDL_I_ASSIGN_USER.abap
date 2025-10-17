@@ -1,0 +1,1 @@
+CLASS zbp_reco_ddl_i_assign_user DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zreco_ddl_i_assign_user.

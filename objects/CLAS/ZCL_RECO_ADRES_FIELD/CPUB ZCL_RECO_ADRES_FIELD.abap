@@ -1,0 +1,7 @@
+CLASS zcl_reco_adres_field DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
+

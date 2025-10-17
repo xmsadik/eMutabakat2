@@ -1,0 +1,6 @@
+CLASS zcl_reco_mock_out DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
+
+  PUBLIC SECTION.
