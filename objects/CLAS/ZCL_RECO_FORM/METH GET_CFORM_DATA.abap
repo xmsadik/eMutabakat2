@@ -340,8 +340,8 @@
               PostingDate            AS budat,
               DueCalculationBaseDate AS zfbdt,
               PaymentTerms           AS zterm,
-              AbsoluteAmountInCoCodeCrcy                 AS zbd2t,
-              AbsoluteAmountInCoCodeCrcy                 AS zbd3t,
+              CashDiscount2Days                 AS zbd2t,
+              NetPaymentDays                 AS zbd3t,
               CashDiscount1Days      AS zbd1t,
               ClearingJournalEntry   AS rebzg,
               DocumentItemText       AS sgtxt
@@ -401,8 +401,8 @@
               PostingDate            AS budat,
               DueCalculationBaseDate AS zfbdt,
               PaymentTerms           AS zterm,
-              AbsoluteAmountInCoCodeCrcy                 AS zbd2t,
-              AbsoluteAmountInCoCodeCrcy                 AS zbd3t,
+              CashDiscount2Days                 AS zbd2t,
+              NetPaymentDays                 AS zbd3t,
               CashDiscount1Days      AS zbd1t,
               ClearingJournalEntry   AS rebzg,
               DocumentItemText       AS sgtxt
@@ -464,8 +464,8 @@
                         PostingDate            AS budat,
                         DueCalculationBaseDate AS zfbdt,
                         PaymentTerms           AS zterm,
-                        AbsoluteAmountInCoCodeCrcy                 AS zbd2t,
-                        AbsoluteAmountInCoCodeCrcy                 AS zbd3t,
+                        CashDiscount2Days                 AS zbd2t,
+                        NetPaymentDays                 AS zbd3t,
                         CashDiscount1Days      AS zbd1t,
                         ClearingJournalEntry   AS rebzg,
                         DocumentItemText       AS sgtxt
@@ -523,8 +523,8 @@
               PostingDate            AS budat,
               DueCalculationBaseDate AS zfbdt,
               PaymentTerms           AS zterm,
-              AbsoluteAmountInCoCodeCrcy                 AS zbd2t,
-              AbsoluteAmountInCoCodeCrcy                 AS zbd3t,
+              CashDiscount2Days                 AS zbd2t,
+              NetPaymentDays                 AS zbd3t,
               CashDiscount1Days      AS zbd1t,
               ClearingJournalEntry   AS rebzg,
               DocumentItemText       AS sgtxt
