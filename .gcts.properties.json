@@ -1,0 +1,14 @@
+{
+  "name": "xmsadik-emutabakat2",
+  "version": "1.0.0",
+  "description": "xmsadik-eMutabakat2",
+  "repositoryLayout": {
+    "formatVersion": 5,
+    "format": "json",
+    "objectStorage": "plain",
+    "metaInformation": ".gctsmetadata/",
+    "tableContent": "true",
+    "readableSource": "false",
+    "keepClient": "false"
+  }
+}
