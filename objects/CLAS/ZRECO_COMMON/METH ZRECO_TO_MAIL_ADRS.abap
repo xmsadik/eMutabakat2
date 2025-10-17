@@ -896,18 +896,18 @@
     "uncomment the following line for console output; prerequisite: code snippet is implementation of if_oo_adt_classrun~main
     "out->write( |response:  { lv_response }| ).
 
-    zinf_regulative_common=>parse_xml(
-          EXPORTING
-            iv_xml_string = lv_response
-          RECEIVING
-            rt_data       = DATA(lt_response_service)
-        ).
-
-    LOOP AT lt_response_service INTO DATA(ls_resp).
-      CASE ls_resp-name .
-        WHEN 'EmailAddress'.
-          e_mail = ls_resp-value.
-      ENDCASE.
-    ENDLOOP.
+*    zinf_regulative_common=>parse_xml(
+*          EXPORTING
+*            iv_xml_string = lv_response
+*          RECEIVING
+*            rt_data       = DATA(lt_response_service)
+*        ).
+*
+*    LOOP AT lt_response_service INTO DATA(ls_resp).
+*      CASE ls_resp-name .
+*        WHEN 'EmailAddress'.
+*          e_mail = ls_resp-value.
+*      ENDCASE.
+*    ENDLOOP.
 
   ENDMETHOD.
