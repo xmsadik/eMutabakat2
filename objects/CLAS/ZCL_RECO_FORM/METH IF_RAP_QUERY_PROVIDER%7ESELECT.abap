@@ -3,8 +3,14 @@
     TRY.
 
         DATA(lt_filter) = io_request->get_filter( )->get_as_ranges( ).
+        DATA(lo_paging) = io_request->get_paging( ).
+        DATA(top)       = lo_paging->get_page_size( ).
+        DATA(skip)      = lo_paging->get_offset( ).
+        IF top < 0.
+          top = 1.
+        ENDIF.
 
-
+        DATA : lv_lineitem TYPE int1.
 
 
         DATA: lt_period_range  TYPE RANGE OF monat,
@@ -182,6 +188,11 @@
                lt_temp TYPE TABLE OF zreco_gtout.
 
         LOOP AT gt_out_c INTO DATA(ls_out_c) .
+
+          lv_lineitem = lv_lineitem + 1.
+          IF skip IS NOT INITIAL.
+            CHECK sy-tabix > skip.
+          ENDIF.
           MOVE-CORRESPONDING ls_out_c TO ls_output.
           ls_output-gjahr = p_gjahr.
           ls_output-period = p_period.
@@ -226,11 +237,7 @@
         IF io_request->is_total_numb_of_rec_requested(  ).
           io_response->set_total_number_of_records( iv_total_number_of_records = lines( lt_output ) ).
         ENDIF.
-
-
-        IF io_request->is_data_requested( ).
-          io_response->set_data( it_data = lt_output ).
-        ENDIF.
+        io_response->set_data( it_data = lt_output ).
 
 
       CATCH cx_rap_query_filter_no_range.
